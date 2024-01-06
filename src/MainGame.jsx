@@ -15,6 +15,7 @@ export default function MainGame() {
     let [wrong, setWrong] = useState([]);
     let [status, setStatus] = useState("");
     let [isWinning, setIsWinning] = useState(false);
+    let [guessedWords, setGuessedWords] = useState([]);
 
     useEffect(() => {
         RandomWord().then((word) => setGameWord(word));
@@ -47,13 +48,19 @@ export default function MainGame() {
                 setStatus("Please enter a 5 letter word!");
             } else {
                 if (inputValue.toLowerCase() === gameWord) {
-                    console.log("You Win");
+                    console.log("Correct Guess");
                     setGuessesLeft(0);
                     setIsWinning(true);
+                    let newGuessedWords = [...guessedWords, inputValue];
+                    setGuessedWords(newGuessedWords);
+                    console.log("Guessed Words: ", newGuessedWords);
                     setStatus("Congratulations! You've guessed the word!");
                 } else {
-                    console.log("You Lose");
+                    console.log("Wrong Guess");
                     setIsWinning(false);
+                    let newGuessedWords = [...guessedWords, inputValue];
+                    setGuessedWords(newGuessedWords);
+                    console.log("Guessed Words: ", newGuessedWords);
                     setGuessesLeft(guessesLeft - 1);
                 }
                 updateAllCorrect();
@@ -117,6 +124,7 @@ export default function MainGame() {
         setWrong([]);
         setStatus("");
         setIsWinning(false);
+        setGuessedWords([]);
         RandomWord().then((word) => setGameWord(word));
     }
 
@@ -138,6 +146,7 @@ export default function MainGame() {
                     correct={correct}
                     correctRight={correctRight}
                     wrong={wrong}
+                    guessedWords={guessedWords}
                 />
             </div>
         </>

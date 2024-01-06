@@ -5,7 +5,12 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import "./ScoreBoard.css";
 
-export default function ScoreBoard({ correct, correctRight, wrong }) {
+export default function ScoreBoard({
+    correct,
+    correctRight,
+    wrong,
+    guessedWords,
+}) {
     let style = {
         py: 0,
         width: "100%",
@@ -65,6 +70,19 @@ export default function ScoreBoard({ correct, correctRight, wrong }) {
                 {removeDuplicates(wrong).map((letter) => (
                     <div className="wrong">{letter.toUpperCase()}</div>
                 ))}
+                <Divider variant="middle" component="li" />
+                <ListItem>
+                    <ListItemText
+                        primary={
+                            <Typography sx={{ fontSize: "20px" }}>
+                                All Guessed Words:
+                            </Typography>
+                        }
+                    />
+                </ListItem>
+                {guessedWords.map((word) => {
+                    return <div>{word.toUpperCase()}</div>;
+                })}
                 <Divider variant="middle" component="li" />
             </List>
         </div>
