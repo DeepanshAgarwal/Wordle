@@ -1,0 +1,53 @@
+.scoreboard {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.correctRight {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 0px 2px;
+    background-color: greenyellow;
+    border: 1px solid black;
+}
+
+.correct {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 0px 2px;
+    background-color: orange;
+    border: 1px solid black;
+}
+
+.wrong {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px 2px;
+    background-color: darkslategrey;
+    border: 1px solid black;
+}
