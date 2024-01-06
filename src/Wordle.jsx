@@ -21,6 +21,17 @@ export default function Wordle({
                 variant="outlined"
                 value={inputValue}
                 onChange={(e) => updateInputValue(e.target.value)}
+                sx={{
+                    "& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#909090",
+                    },
+                    "& .MuiFormLabel-root": {
+                        color: "#909090",
+                    },
+                    "& .MuiFormLabel-root.Mui-focused": {
+                        color: "rgb(81, 146, 243)",
+                    },
+                }}
             />
             <Button id="check" variant="contained" onClick={check}>
                 Check
