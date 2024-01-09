@@ -31,7 +31,7 @@ export default function MainGame() {
 
     function check() {
         setStatus("");
-        if (guessesLeft <= 1) {
+        if (guessesLeft == 0) {
             console.log("No more guesses left!");
             setIsWinning(false);
             setGuessesLeft(0);
