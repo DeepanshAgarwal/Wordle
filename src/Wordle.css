@@ -1,6 +1,7 @@
 .wordle {
-    /* min-height: 90%;
-    height: auto; */
+    min-height: 50vh;
+    height: 65vh;
+    /* background-color: yellow; */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -19,4 +20,12 @@
 #check {
     width: 50%;
     margin-top: 25px;
+}
+
+@media (width <= 520px) {
+    .wordle {
+        height: auto;
+        min-height: none;
+        border: none;
+    }
 }
