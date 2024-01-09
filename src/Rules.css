@@ -8,3 +8,7 @@
     border: border-box;
     padding: 20px;
 }
+
+.rules li {
+    font-size: 18px;
+}
