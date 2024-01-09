@@ -24,6 +24,9 @@ export default function Rules() {
                     be grey.
                 </li>
             </ul>
+            <div>
+                <i>THIS GAME CURRENTLY DOESN'T WORK OFFLINE.</i>
+            </div>
         </div>
     );
 }

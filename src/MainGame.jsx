@@ -56,7 +56,7 @@ export default function MainGame() {
                     console.log("Guessed Words: ", newGuessedWords);
                     setStatus("Congratulations! You've guessed the word!");
                 } else {
-                    console.log("Wrong Guess");
+                    console.log("Wrong Guess: " + inputValue.toUpperCase());
                     setIsWinning(false);
                     let newGuessedWords = [...guessedWords, inputValue];
                     setGuessedWords(newGuessedWords);
